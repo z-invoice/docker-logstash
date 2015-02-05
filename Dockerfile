@@ -13,4 +13,4 @@ COPY logstash-syslog.json /etc/logstash/logstash-syslog.json
 EXPOSE 5000
 
 ENTRYPOINT ["/opt/logstash/bin/logstash"]
-CMD ["-f","/etc/logstash/logstash-syslog.json"]
+CMD ["-f","/etc/logstash/"]
