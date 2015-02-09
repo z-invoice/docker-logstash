@@ -8,7 +8,7 @@ ENV ls=logstash-1.4.2
 RUN curl -kLsS http://download.elasticsearch.org/logstash/logstash/${ls}.tar.gz | gunzip -c | tar -xf - -C /opt &&\
     ln -s /opt/${ls} /opt/logstash
 
-COPY logstash-syslog.json /etc/logstash/logstash-syslog.json
+COPY config/* /etc/logstash/
 
 EXPOSE 5000
 
