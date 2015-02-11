@@ -14,4 +14,4 @@ COPY patterns/* /etc/logstash/patterns/
 EXPOSE 5000
 
 ENTRYPOINT ["/opt/logstash/bin/logstash"]
-CMD ["--debug","-f","/etc/logstash/config/"]
+CMD ["-f","/etc/logstash/config/"]
