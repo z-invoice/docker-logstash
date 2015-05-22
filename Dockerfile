@@ -3,9 +3,9 @@ FROM jeanblanchard/busybox-java
 
 MAINTAINER Vadim Bauer <hello@z-rechnung.de>
 
-ENV ls=logstash-1.4.2
+ENV ls=logstash-1.5.0
 
-RUN curl -kLsS http://download.elasticsearch.org/logstash/logstash/${ls}.tar.gz | gunzip -c | tar -xf - -C /opt &&\
+RUN opkg-install bash && curl -kLsS http://download.elasticsearch.org/logstash/logstash/${ls}.tar.gz | gunzip -c | tar -xf - -C /opt &&\
     ln -s /opt/${ls} /opt/logstash
 
 COPY config/* /etc/logstash/config/
