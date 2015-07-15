@@ -3,7 +3,7 @@ FROM jeanblanchard/busybox-java
 
 MAINTAINER Vadim Bauer <hello@z-rechnung.de>
 
-ENV ls=logstash-1.5.0
+ENV ls=logstash-1.5.2
 
 RUN opkg-install bash && curl -kLsS http://download.elasticsearch.org/logstash/logstash/${ls}.tar.gz | gunzip -c | tar -xf - -C /opt &&\
     ln -s /opt/${ls} /opt/logstash
